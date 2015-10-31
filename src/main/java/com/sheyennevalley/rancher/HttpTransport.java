@@ -4,11 +4,11 @@ package com.sheyennevalley.rancher;
  */
 public interface HttpTransport {
 
-    Response makeGetRequest(String url);
+    RancherResponse makeGetRequest(String url);
 
-    Response makePutRequest(String url, String content);
+    RancherResponse makePutRequest(String url, String content);
 
-    Response makePutRequest(String url, byte[] content);
+    RancherResponse makePutRequest(String url, byte[] content);
 
-    Response makeDeleteRequest(String url);
+    RancherResponse makeDeleteRequest(String url);
 }

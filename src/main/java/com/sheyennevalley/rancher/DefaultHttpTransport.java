@@ -36,39 +36,39 @@ public class DefaultHttpTransport implements HttpTransport {
         this.httpClient = httpClient;
     }
 
-    public Response makeGetRequest(String url) {
+    public RancherResponse makeGetRequest(String url) {
         HttpGet httpGet = new HttpGet(url);
         return executeRequest(httpGet);
     }
 
-    public Response makePutRequest(String url, String content) {
+    public RancherResponse makePutRequest(String url, String content) {
         HttpPut httpPut = new HttpPut(url);
         httpPut.setEntity(new StringEntity(content, Charset.forName("UTF-8")));
         return executeRequest(httpPut);
     }
 
-    public Response makePutRequest(String url, byte[] content) {
+    public RancherResponse makePutRequest(String url, byte[] content) {
         HttpPut httpPut = new HttpPut(url);
         httpPut.setEntity(new ByteArrayEntity(content));
         return executeRequest(httpPut);
     }
 
-    public Response makeDeleteRequest(String url) {
+    public RancherResponse makeDeleteRequest(String url) {
         HttpDelete httpDelete = new HttpDelete(url);
         return executeRequest(httpDelete);
     }
 
-    private Response executeRequest(HttpUriRequest httpRequest) {
+    private RancherResponse executeRequest(HttpUriRequest httpRequest) {
         try {
-            return httpClient.execute(httpRequest, new ResponseHandler<Response>() {
-                public Response handleResponse(HttpResponse response) throws IOException {
+            return httpClient.execute(httpRequest, new ResponseHandler<RancherResponse>() {
+                public RancherResponse handleResponse(HttpResponse response) throws IOException {
                     int statusCode = response.getStatusLine().getStatusCode();
                     String statusMessage = response.getStatusLine().getReasonPhrase();
 
                     String content = EntityUtils.toString(response.getEntity(), Charset.forName("UTF-8"));
 
 
-                    return new Response(statusCode, statusMessage, content);
+                    return new RancherResponse(statusCode, statusMessage, content);
                 }
             });
         } catch (IOException e) {

@@ -9,7 +9,7 @@ import org.apache.http.client.HttpClient;
 public class BaseClient {
 
     private static final String DEFAULT_HOST = "localhost";
-    private static final int DEFAULT_PORT = 8500;
+    private static final int DEFAULT_PORT = 8080;
 
     // one real HTTP client for all instances
     private static final HttpTransport DEFAULT_HTTP_TRANSPORT = new DefaultHttpTransport();
@@ -55,28 +55,28 @@ public class BaseClient {
         this.agentAddress = agentHost + ":" + agentPort;
     }
 
-    public Response makeGetRequest(String endpoint, UrlParameters... urlParams) {
+    public RancherResponse makeGetRequest(String endpoint, UrlParameters... urlParams) {
         String url = agentAddress + endpoint;
         url = Utils.generateUrl(url, urlParams);
 
         return httpTransport.makeGetRequest(url);
     }
 
-    public Response makePutRequest(String endpoint, String content, UrlParameters... urlParams) {
+    public RancherResponse makePutRequest(String endpoint, String content, UrlParameters... urlParams) {
         String url = agentAddress + endpoint;
         url = Utils.generateUrl(url, urlParams);
 
         return httpTransport.makePutRequest(url, content);
     }
 
-    public Response makePutRequest(String endpoint, byte[] content, UrlParameters... urlParams) {
+    public RancherResponse makePutRequest(String endpoint, byte[] content, UrlParameters... urlParams) {
         String url = agentAddress + endpoint;
         url = Utils.generateUrl(url, urlParams);
 
         return httpTransport.makePutRequest(url, content);
     }
 
-    public Response makeDeleteRequest(String endpoint, UrlParameters... urlParams) {
+    public RancherResponse makeDeleteRequest(String endpoint, UrlParameters... urlParams) {
         String url = agentAddress + endpoint;
         url = Utils.generateUrl(url, urlParams);
 
