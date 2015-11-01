@@ -1,0 +1,2796 @@
+{
+  "type": "collection",
+  "resourceType": "container",
+  "links": {
+    "self": "http://192.168.1.51:8080/v1/containers"
+  },
+  "createTypes": {
+    "launchConfig": "http://192.168.1.51:8080/v1/launchconfigs"
+  },
+  "actions": {},
+  "data": [
+    {
+      "id": "1i7",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i7",
+        "account": "http://192.168.1.51:8080/v1/containers/1i7/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i7/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i7/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i7/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i7/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i7/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i7/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i7/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i7/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i7/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i7/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i7/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i7/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i7/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i7/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i7/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i7/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i7/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i7/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i7/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i7/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i7/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i7/?action=execute"
+      },
+      "name": "thirsty_kirch",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": [
+        "/usr/bin/s6-svscan",
+        "/service"
+      ],
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-10-30T03:09:01Z",
+      "createdTS": 1446174541000,
+      "data": {
+        "fields": {
+          "requestedHostId": 1,
+          "imageUuid": "docker:rancher/server",
+          "networkMode": "bridge",
+          "networkIds": [
+            4
+          ],
+          "dataVolumes": [
+            "/var/log/mysql",
+            "/var/lib/mysql",
+            "/var/lib/cattle"
+          ],
+          "transitioningMessage": "Post-network",
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.2",
+          "dockerPorts": {
+            "8080/tcp": "8080",
+            "3306/tcp": null
+          },
+          "memory": null,
+          "cpuSet": null,
+          "cpuShares": null,
+          "memorySwap": null,
+          "domainName": null,
+          "user": null,
+          "tty": false,
+          "stdinOpen": false,
+          "workingDir": null,
+          "environment": {
+            "CATTLE_USE_LOCAL_ARTIFACTS": "true",
+            "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+            "CATTLE_RANCHER_SERVER_IMAGE": "v0.43.1",
+            "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+            "CATTLE_HOST_API_PROXY_MODE": "embedded",
+            "DEFAULT_CATTLE_MACHINE_EXECUTE": "true",
+            "CATTLE_DB_CATTLE_DATABASE": "mysql",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "DEBIAN_FRONTEND": "noninteractive",
+            "DEFAULT_CATTLE_CATALOG_EXECUTE": "true",
+            "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+            "CATTLE_CATTLE_VERSION": "v0.106.0",
+            "CATTLE_HOME": "/var/lib/cattle",
+            "DEFAULT_CATTLE_API_UI_INDEX": "//releases.rancher.com/ui/0.63.0",
+            "S6_SERVICE_DIR": "/service",
+            "CATTLE_RANCHER_COMPOSE_VERSION": "v0.5.0",
+            "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE": "true"
+          },
+          "command": [
+            "/usr/bin/s6-svscan",
+            "/service"
+          ],
+          "entryPoint": [],
+          "volumeDriver": null,
+          "ports": [
+            "8080:8080/tcp"
+          ],
+          "privileged": false,
+          "publishAllPorts": false,
+          "lxcConf": {},
+          "dns": [],
+          "dnsSearch": [],
+          "capAdd": [],
+          "capDrop": [],
+          "restartPolicy": {
+            "name": "always",
+            "maximumRetryCount": 0
+          },
+          "devices": [],
+          "securityOpt": null,
+          "pidMode": null,
+          "readOnly": false,
+          "extraHosts": null,
+          "logConfig": {
+            "driver": "json-file",
+            "config": {}
+          },
+          "labels": {},
+          "primaryIpAddress": "172.17.0.2"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 3158,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-10-30T02:58:01.188684457Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "035ee297d093",
+            "Entrypoint": null,
+            "Env": [
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "DEBIAN_FRONTEND=noninteractive",
+              "CATTLE_HOME=/var/lib/cattle",
+              "DEFAULT_CATTLE_API_UI_INDEX=//releases.rancher.com/ui/0.63.0",
+              "CATTLE_DB_CATTLE_DATABASE=mysql",
+              "CATTLE_USE_LOCAL_ARTIFACTS=true",
+              "S6_SERVICE_DIR=/service",
+              "CATTLE_HOST_API_PROXY_MODE=embedded",
+              "CATTLE_RANCHER_SERVER_IMAGE=v0.43.1",
+              "CATTLE_RANCHER_COMPOSE_VERSION=v0.5.0",
+              "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+              "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+              "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+              "CATTLE_CATTLE_VERSION=v0.106.0",
+              "DEFAULT_CATTLE_MACHINE_EXECUTE=true",
+              "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE=true",
+              "DEFAULT_CATTLE_CATALOG_EXECUTE=true"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/usr/bin/s6-svscan",
+              "/service"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/var/log/mysql": {},
+              "/var/lib/mysql": {},
+              "/var/lib/cattle": {}
+            },
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "rancher/server",
+            "Labels": {},
+            "ExposedPorts": {
+              "8080/tcp": {},
+              "3306/tcp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/hosts",
+          "Args": [
+            "/service"
+          ],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/usr/bin/s6-svscan",
+          "HostnamePath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/hostname",
+          "VolumesRW": {
+            "/var/log/mysql": true,
+            "/var/lib/mysql": true,
+            "/var/lib/cattle": true
+          },
+          "RestartCount": 0,
+          "Name": "/thirsty_kirch",
+          "Created": "2015-10-30T02:58:00.638221531Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/var/log/mysql": "/var/lib/docker/volumes/65ec574d281ca0270d3a7afc0c9e52073c51fd9e5f0d67e4e68f37371499f0df/_data",
+            "/var/lib/mysql": "/var/lib/docker/volumes/7c43ebe8b7abde1bfdb3323f5d7682b27b9867d547a6080884adc4bff314f8ae/_data",
+            "/var/lib/cattle": "/var/lib/docker/volumes/9c1f9be932abe55a706956ab8ffdaab61142cdce92606e49100c145361c90f62/_data"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "f93df92527aa814e12ebf4c6baa900e031bf93518e478105bff8249dd6339ca9",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "c3ef9d0a74f5b1b06c2041ab4f6dd151de0d0eeb9f33fd5c58db306f86760040",
+            "SandboxKey": "/var/run/docker/netns/035ee297d093",
+            "MacAddress": "02:42:ac:11:00:02",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.2",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "8080/tcp": [
+                {
+                  "HostPort": "8080",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "3306/tcp": null
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "5c380d384641e906363c84004d50f472ce108a8cb4f0b5ba1e39504fed2cdb79",
+          "LogPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": -1,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "always"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": [],
+            "Devices": [],
+            "Binds": null,
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": {
+              "8080/tcp": [
+                {
+                  "HostPort": "8080",
+                  "HostIp": ""
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up 12 minutes",
+          "Created": 1446173880,
+          "Image": "rancher/server",
+          "Labels": {},
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 8080,
+              "PrivatePort": 8080
+            },
+            {
+              "Type": "tcp",
+              "PrivatePort": 3306
+            }
+          ],
+          "Command": "/usr/bin/s6-svscan /service",
+          "Names": [
+            "/thirsty_kirch"
+          ],
+          "Id": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [
+        "/var/log/mysql",
+        "/var/lib/mysql",
+        "/var/lib/cattle"
+      ],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": [],
+      "environment": {
+        "CATTLE_USE_LOCAL_ARTIFACTS": "true",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+        "CATTLE_RANCHER_SERVER_IMAGE": "v0.43.1",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+        "CATTLE_HOST_API_PROXY_MODE": "embedded",
+        "DEFAULT_CATTLE_MACHINE_EXECUTE": "true",
+        "CATTLE_DB_CATTLE_DATABASE": "mysql",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DEBIAN_FRONTEND": "noninteractive",
+        "DEFAULT_CATTLE_CATALOG_EXECUTE": "true",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+        "CATTLE_CATTLE_VERSION": "v0.106.0",
+        "CATTLE_HOME": "/var/lib/cattle",
+        "DEFAULT_CATTLE_API_UI_INDEX": "//releases.rancher.com/ui/0.63.0",
+        "S6_SERVICE_DIR": "/service",
+        "CATTLE_RANCHER_COMPOSE_VERSION": "v0.5.0",
+        "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE": "true"
+      },
+      "expose": null,
+      "externalId": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb",
+      "extraHosts": null,
+      "firstRunning": "2015-10-30T03:10:57Z",
+      "firstRunningTS": 1446174657000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": "035ee297d093",
+      "imageUuid": "docker:rancher/server",
+      "kind": "container",
+      "labels": {},
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "lxcConf": {},
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": true,
+      "networkContainerId": null,
+      "networkMode": "bridge",
+      "pidMode": null,
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "primaryIpAddress": "172.17.0.2",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": "1h1",
+      "restartPolicy": {
+        "name": "always",
+        "maximumRetryCount": 0
+      },
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": false,
+      "systemContainer": null,
+      "token": "hYm3n5UBwGvEyaDi7QiT8c5vWQuxxtkFWdsdzS85kVZT19MvaTwAJNhngxU7BQRSPs4KXk7I4XpmSloJgjsWQ",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": false,
+      "user": null,
+      "uuid": "1ef6e450-6bb0-42b6-ae62-1906709d6c84",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i10",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i10",
+        "account": "http://192.168.1.51:8080/v1/containers/1i10/account",
+        "agent": "http://192.168.1.51:8080/v1/containers/1i10/agent",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i10/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i10/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i10/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i10/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i10/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i10/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i10/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i10/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i10/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i10/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i10/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i10/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i10/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i10/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i10/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i10/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i10/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i10/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i10/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i10/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i10/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i10/?action=execute"
+      },
+      "name": "Network Agent",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": "1a2",
+      "allocationState": "active",
+      "build": null,
+      "capAdd": null,
+      "capDrop": null,
+      "command": null,
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-10-30T03:10:44Z",
+      "createdTS": 1446174644000,
+      "data": {
+        "fields": {
+          "imageUuid": "docker:rancher/agent-instance:v0.5.0",
+          "networkIds": [],
+          "vnetIds": [
+            1
+          ],
+          "privileged": true,
+          "dataVolumes": [],
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.11",
+          "dockerPorts": {
+            "4500/udp": "4500",
+            "500/udp": "500"
+          },
+          "primaryIpAddress": "10.42.87.64",
+          "transitioningMessage": "Post-network"
+        },
+        "ipsec": {
+          "1": {
+            "isakmp": 500,
+            "nat": 4500
+          }
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 22021,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "2015-10-31T22:11:40.499731988Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-11-01T01:48:45.930379833Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "0b6a1089b167",
+            "Entrypoint": null,
+            "Env": [
+              "CATTLE_CONFIG_URL=http://192.168.1.51:8080/v1",
+              "CATTLE_AGENT_INSTANCE_AUTH=Basic RDQxMEZCQzAzMzU4ODlGQUJGM0U6Z0ZSRjJUSjZIWXVvcm9OUGFvaGduRkdhTEhvc3lVOU5UdkhFbXk4bg==",
+              "CATTLE_URL=http://192.168.1.51:8080/v1",
+              "HOME=/",
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "MacAddress": "02:20:1c:67:72:0b",
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/etc/init.d/agent-instance-startup",
+              "init"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {},
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "rancher/agent-instance:v0.5.0",
+            "Labels": {
+              "io.rancher.container.agent_id": "2",
+              "io.rancher.container.system": "NetworkAgent",
+              "io.rancher.container.ip": "10.42.87.64/16",
+              "io.rancher.container.uuid": "fcf123ed-4edd-4598-a92e-581db8712bba"
+            },
+            "ExposedPorts": {
+              "4500/udp": {},
+              "500/udp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268/hosts",
+          "Args": [
+            "init"
+          ],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/etc/init.d/agent-instance-startup",
+          "HostnamePath": "/var/lib/docker/containers/0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268/hostname",
+          "VolumesRW": {},
+          "RestartCount": 0,
+          "Name": "/fcf123ed-4edd-4598-a92e-581db8712bba",
+          "Created": "2015-10-30T03:12:05.82778767Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {},
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "199d8ed56f360344b50040ecf0a7823f7209c2982e656ab2178f7a05878df46d",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "5b03b950202a785d0bc20f6bf336c98b1113b12da8a22448c28261fafa063d24",
+            "SandboxKey": "/var/run/docker/netns/0b6a1089b167",
+            "MacAddress": "02:20:1c:67:72:0b",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.11",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "4500/udp": [
+                {
+                  "HostPort": "4500",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "500/udp": [
+                {
+                  "HostPort": "500",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "aa21b3943dbdd4784ce01856debeb168f2178c5755b75ff6783348132028911a",
+          "LogPath": "/var/lib/docker/containers/0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268/0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": null,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": true,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": ""
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": null,
+            "Devices": null,
+            "Binds": null,
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": {
+              "4500/udp": [
+                {
+                  "HostPort": "4500",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "500/udp": [
+                {
+                  "HostPort": "500",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up Less than a second",
+          "Created": 1446174725,
+          "Image": "rancher/agent-instance:v0.5.0",
+          "Labels": {
+            "io.rancher.container.agent_id": "2",
+            "io.rancher.container.system": "NetworkAgent",
+            "io.rancher.container.ip": "10.42.87.64/16",
+            "io.rancher.container.uuid": "fcf123ed-4edd-4598-a92e-581db8712bba"
+          },
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "udp",
+              "PublicPort": 4500,
+              "PrivatePort": 4500
+            },
+            {
+              "IP": "0.0.0.0",
+              "Type": "udp",
+              "PublicPort": 500,
+              "PrivatePort": 500
+            }
+          ],
+          "Command": "/etc/init.d/agent-instance-startup init",
+          "Names": [
+            "/fcf123ed-4edd-4598-a92e-581db8712bba"
+          ],
+          "Id": "0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": null,
+      "dns": null,
+      "dnsSearch": null,
+      "domainName": null,
+      "entryPoint": null,
+      "environment": null,
+      "expose": null,
+      "externalId": "0b6a1089b167c8a950a53de58eba0340b16e4c0d4c51b3c11fd3642677543268",
+      "extraHosts": null,
+      "firstRunning": "2015-10-30T03:12:13Z",
+      "firstRunningTS": 1446174733000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": null,
+      "imageUuid": "docker:rancher/agent-instance:v0.5.0",
+      "kind": "container",
+      "labels": null,
+      "logConfig": null,
+      "lxcConf": null,
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": false,
+      "networkContainerId": null,
+      "networkIds": [],
+      "networkMode": null,
+      "pidMode": null,
+      "ports": null,
+      "primaryIpAddress": "10.42.87.64",
+      "privileged": true,
+      "publishAllPorts": null,
+      "readOnly": null,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": null,
+      "restartPolicy": null,
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": null,
+      "systemContainer": "NetworkAgent",
+      "token": "5YghUcd7chPbNb2I3FbhyNWP2yMd4y7LQzp1XMxJX2MnMezXlXMuw0reQ4uodhlxuD2nwAQiqgC5J79Q6aQ",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": null,
+      "user": null,
+      "uuid": "fcf123ed-4edd-4598-a92e-581db8712bba",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i16",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i16",
+        "account": "http://192.168.1.51:8080/v1/containers/1i16/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i16/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i16/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i16/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i16/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i16/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i16/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i16/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i16/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i16/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i16/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i16/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i16/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i16/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i16/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i16/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i16/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i16/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i16/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i16/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i16/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i16/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i16/?action=execute"
+      },
+      "name": "sabnzbd",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": [
+        "/usr/bin/sabnzbdplus",
+        "--config-file",
+        "/config",
+        "--console"
+      ],
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-10-31T02:22:32Z",
+      "createdTS": 1446258152000,
+      "data": {
+        "fields": {
+          "requestedHostId": 1,
+          "imageUuid": "docker:timhaak/sabnzbd",
+          "networkMode": "bridge",
+          "networkIds": [
+            4
+          ],
+          "dataVolumes": [
+            "/config",
+            "/data",
+            "/etc/docker/sabnzbd:/config",
+            "/usr/local/plex:/data"
+          ],
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.22",
+          "dockerPorts": {
+            "8080/tcp": "8088",
+            "9090/tcp": "9090"
+          },
+          "memory": null,
+          "cpuSet": null,
+          "cpuShares": null,
+          "memorySwap": null,
+          "domainName": null,
+          "user": null,
+          "tty": false,
+          "stdinOpen": false,
+          "workingDir": null,
+          "environment": {
+            "TERM": "xterm",
+            "LANGUAGE": "en_US.UTF-8",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "DEBIAN_FRONTEND": "noninteractive",
+            "LC_ALL": "en_US.UTF-8",
+            "LANG": "en_US.UTF-8"
+          },
+          "command": [
+            "/usr/bin/sabnzbdplus",
+            "--config-file",
+            "/config",
+            "--console"
+          ],
+          "entryPoint": [],
+          "volumeDriver": null,
+          "ports": [
+            "8088:8080/tcp",
+            "9090:9090/tcp"
+          ],
+          "privileged": false,
+          "publishAllPorts": false,
+          "lxcConf": {},
+          "dns": [],
+          "dnsSearch": [],
+          "capAdd": [],
+          "capDrop": [],
+          "restartPolicy": {
+            "name": "no",
+            "maximumRetryCount": 0
+          },
+          "devices": [],
+          "securityOpt": null,
+          "pidMode": null,
+          "readOnly": false,
+          "extraHosts": null,
+          "logConfig": {
+            "driver": "json-file",
+            "config": {}
+          },
+          "labels": {},
+          "primaryIpAddress": "172.17.0.22",
+          "transitioningMessage": "Post-network"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 21836,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "2015-10-31T04:18:26.123419266Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-10-31T04:18:31.177508378Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "sabnzbd",
+            "Entrypoint": null,
+            "Env": [
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "DEBIAN_FRONTEND=noninteractive",
+              "LANG=en_US.UTF-8",
+              "LC_ALL=en_US.UTF-8",
+              "LANGUAGE=en_US.UTF-8",
+              "TERM=xterm"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/usr/bin/sabnzbdplus",
+              "--config-file",
+              "/config",
+              "--console"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/config": {},
+              "/data": {}
+            },
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "timhaak/sabnzbd",
+            "Labels": {},
+            "ExposedPorts": {
+              "8080/tcp": {},
+              "9090/tcp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6/hosts",
+          "Args": [
+            "--config-file",
+            "/config",
+            "--console"
+          ],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/usr/bin/sabnzbdplus",
+          "HostnamePath": "/var/lib/docker/containers/38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6/hostname",
+          "VolumesRW": {
+            "/config": true,
+            "/data": true
+          },
+          "RestartCount": 0,
+          "Name": "/sabnzbd",
+          "Created": "2015-10-31T02:22:31.181907561Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/config": "/etc/docker/sabnzbd",
+            "/data": "/usr/local/plex"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "f93df92527aa814e12ebf4c6baa900e031bf93518e478105bff8249dd6339ca9",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "6173a77552a75026f4831493ab486860c8b234b0fd4f076511a5ff1a2c5f1ea9",
+            "SandboxKey": "/var/run/docker/netns/38769bb2a832",
+            "MacAddress": "02:42:ac:11:00:16",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.22",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "8080/tcp": [
+                {
+                  "HostPort": "8088",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "9090/tcp": [
+                {
+                  "HostPort": "9090",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "dad3c4b43fe50f4b69b2931b1a1ad946fb6b874d51f29bc59e5e0c9cef147cd3",
+          "LogPath": "/var/lib/docker/containers/38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6/38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": -1,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "no"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": [],
+            "Devices": [],
+            "Binds": [
+              "/etc/docker/sabnzbd:/config",
+              "/usr/local/plex:/data"
+            ],
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": {
+              "8080/tcp": [
+                {
+                  "HostPort": "8088",
+                  "HostIp": ""
+                }
+              ],
+              "9090/tcp": [
+                {
+                  "HostPort": "9090",
+                  "HostIp": ""
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up 4 seconds",
+          "Created": 1446258151,
+          "Image": "timhaak/sabnzbd",
+          "Labels": {},
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 8088,
+              "PrivatePort": 8080
+            },
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 9090,
+              "PrivatePort": 9090
+            }
+          ],
+          "Command": "/usr/bin/sabnzbdplus --config-file /config --console",
+          "Names": [
+            "/sabnzbd"
+          ],
+          "Id": "38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [
+        "/config",
+        "/data",
+        "/etc/docker/sabnzbd:/config",
+        "/usr/local/plex:/data"
+      ],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": [],
+      "environment": {
+        "TERM": "xterm",
+        "LANGUAGE": "en_US.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DEBIAN_FRONTEND": "noninteractive",
+        "LC_ALL": "en_US.UTF-8",
+        "LANG": "en_US.UTF-8"
+      },
+      "expose": null,
+      "externalId": "38769bb2a8323531baf56277d6763f5bffad2fc7d1a01b576e00bf41eaaa16d6",
+      "extraHosts": null,
+      "firstRunning": "2015-10-31T02:22:51Z",
+      "firstRunningTS": 1446258171000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": "sabnzbd",
+      "imageUuid": "docker:timhaak/sabnzbd",
+      "kind": "container",
+      "labels": {},
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "lxcConf": {},
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": true,
+      "networkContainerId": null,
+      "networkMode": "bridge",
+      "pidMode": null,
+      "ports": [
+        "8088:8080/tcp",
+        "9090:9090/tcp"
+      ],
+      "primaryIpAddress": "172.17.0.22",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": "1h1",
+      "restartPolicy": {
+        "name": "no",
+        "maximumRetryCount": 0
+      },
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": false,
+      "systemContainer": null,
+      "token": "PPS3bO41vxdBVtD1favJ0gnnOaunGsVVrnYNbZN3NX4MsHigQPVo2KoRQLH6UCNt2pukkJsFDfs9tVMT9foMQ",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": false,
+      "user": null,
+      "uuid": "adfbd4a3-46cb-4a46-a143-f406a842a21e",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i19",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i19",
+        "account": "http://192.168.1.51:8080/v1/containers/1i19/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i19/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i19/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i19/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i19/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i19/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i19/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i19/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i19/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i19/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i19/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i19/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i19/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i19/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i19/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i19/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i19/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i19/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i19/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i19/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i19/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i19/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i19/?action=execute"
+      },
+      "name": "transmission",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": [
+        "/run_transmission.sh"
+      ],
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-10-31T05:35:49Z",
+      "createdTS": 1446269749000,
+      "data": {
+        "fields": {
+          "requestedHostId": 1,
+          "imageUuid": "docker:elventear/transmission",
+          "networkMode": "bridge",
+          "networkIds": [
+            4
+          ],
+          "dataVolumes": [
+            "/var/lib/transmission-daemon/downloads",
+            "/var/lib/transmission-daemon/incomplete",
+            "/usr/local/transmission/downloads:/var/lib/transmission-daemon/downloads",
+            "/usr/local/transmission/incomplete:/var/lib/transmission-daemon/incomplete"
+          ],
+          "transitioningMessage": "Post-network",
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.24",
+          "dockerPorts": {
+            "12345/tcp": "12345",
+            "9091/tcp": "9091",
+            "12345/udp": "12345"
+          },
+          "memory": null,
+          "cpuSet": null,
+          "cpuShares": null,
+          "memorySwap": null,
+          "domainName": null,
+          "user": "debian-transmission",
+          "tty": false,
+          "stdinOpen": false,
+          "workingDir": null,
+          "environment": {
+            "HOME": "/",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "ADMIN_PASS": "ckiHuu73CNmv64i"
+          },
+          "command": [
+            "/run_transmission.sh"
+          ],
+          "entryPoint": [],
+          "volumeDriver": null,
+          "ports": [
+            "12345:12345/tcp",
+            "9091:9091/tcp",
+            "12345:12345/udp"
+          ],
+          "privileged": false,
+          "publishAllPorts": false,
+          "lxcConf": {},
+          "dns": [],
+          "dnsSearch": [],
+          "capAdd": [],
+          "capDrop": [],
+          "restartPolicy": {
+            "name": "no",
+            "maximumRetryCount": 0
+          },
+          "devices": [],
+          "securityOpt": null,
+          "pidMode": null,
+          "readOnly": false,
+          "extraHosts": null,
+          "logConfig": {
+            "driver": "json-file",
+            "config": {}
+          },
+          "labels": {},
+          "primaryIpAddress": "172.17.0.24"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 18931,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-10-31T05:35:48.544950458Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "7828d9a5532f",
+            "Entrypoint": null,
+            "Env": [
+              "ADMIN_PASS=ckiHuu73CNmv64i",
+              "HOME=/",
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "Cpuset": "",
+            "User": "debian-transmission",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/run_transmission.sh"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/var/lib/transmission-daemon/downloads": {},
+              "/var/lib/transmission-daemon/incomplete": {}
+            },
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "elventear/transmission",
+            "Labels": {},
+            "ExposedPorts": {
+              "12345/tcp": {},
+              "9091/tcp": {},
+              "12345/udp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419/hosts",
+          "Args": [],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/run_transmission.sh",
+          "HostnamePath": "/var/lib/docker/containers/7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419/hostname",
+          "VolumesRW": {
+            "/var/lib/transmission-daemon/downloads": true,
+            "/var/lib/transmission-daemon/incomplete": true
+          },
+          "RestartCount": 0,
+          "Name": "/transmission",
+          "Created": "2015-10-31T05:35:48.012033656Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/var/lib/transmission-daemon/downloads": "/usr/local/transmission/downloads",
+            "/var/lib/transmission-daemon/incomplete": "/usr/local/transmission/incomplete"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "f93df92527aa814e12ebf4c6baa900e031bf93518e478105bff8249dd6339ca9",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "5e5589d257a08b04e90e1698c214109a78a11c3d051fd2a91afde1e42c8e910a",
+            "SandboxKey": "/var/run/docker/netns/7828d9a5532f",
+            "MacAddress": "02:42:ac:11:00:18",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.24",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "12345/tcp": [
+                {
+                  "HostPort": "12345",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "9091/tcp": [
+                {
+                  "HostPort": "9091",
+                  "HostIp": "0.0.0.0"
+                }
+              ],
+              "12345/udp": [
+                {
+                  "HostPort": "12345",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "ff03982a8b8b2c299003c38b5c262efeb16edf42e4dd78f658ba289b2a52c973",
+          "LogPath": "/var/lib/docker/containers/7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419/7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": -1,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "no"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": [],
+            "Devices": [],
+            "Binds": [
+              "/usr/local/transmission/downloads:/var/lib/transmission-daemon/downloads",
+              "/usr/local/transmission/incomplete:/var/lib/transmission-daemon/incomplete"
+            ],
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": {
+              "12345/tcp": [
+                {
+                  "HostPort": "12345",
+                  "HostIp": ""
+                }
+              ],
+              "9091/tcp": [
+                {
+                  "HostPort": "9091",
+                  "HostIp": ""
+                }
+              ],
+              "12345/udp": [
+                {
+                  "HostPort": "12345",
+                  "HostIp": ""
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up 11 seconds",
+          "Created": 1446269748,
+          "Image": "elventear/transmission",
+          "Labels": {},
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 12345,
+              "PrivatePort": 12345
+            },
+            {
+              "IP": "0.0.0.0",
+              "Type": "udp",
+              "PublicPort": 12345,
+              "PrivatePort": 12345
+            },
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 9091,
+              "PrivatePort": 9091
+            }
+          ],
+          "Command": "/run_transmission.sh",
+          "Names": [
+            "/transmission"
+          ],
+          "Id": "7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [
+        "/var/lib/transmission-daemon/downloads",
+        "/var/lib/transmission-daemon/incomplete",
+        "/usr/local/transmission/downloads:/var/lib/transmission-daemon/downloads",
+        "/usr/local/transmission/incomplete:/var/lib/transmission-daemon/incomplete"
+      ],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": [],
+      "environment": {
+        "HOME": "/",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "ADMIN_PASS": "ckiHuu73CNmv64i"
+      },
+      "expose": null,
+      "externalId": "7828d9a5532fc07e1932cf454d605c542c263a3dfef472452fc0b360de388419",
+      "extraHosts": null,
+      "firstRunning": "2015-10-31T05:36:11Z",
+      "firstRunningTS": 1446269771000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": "7828d9a5532f",
+      "imageUuid": "docker:elventear/transmission",
+      "kind": "container",
+      "labels": {},
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "lxcConf": {},
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": true,
+      "networkContainerId": null,
+      "networkMode": "bridge",
+      "pidMode": null,
+      "ports": [
+        "12345:12345/tcp",
+        "9091:9091/tcp",
+        "12345:12345/udp"
+      ],
+      "primaryIpAddress": "172.17.0.24",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": "1h1",
+      "restartPolicy": {
+        "name": "no",
+        "maximumRetryCount": 0
+      },
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": false,
+      "systemContainer": null,
+      "token": "kTzrTh5eCMTXg6cgPtejIQ4k2r4n6KB2cZ2jc1BHhtMNCTEZl3hrH73R2QxS9JYyy9mOnYurXaXM6gYl6Eg",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": false,
+      "user": "debian-transmission",
+      "uuid": "ffe5548e-66ec-44ba-937c-f69e34858b77",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i20",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i20",
+        "account": "http://192.168.1.51:8080/v1/containers/1i20/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i20/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i20/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i20/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i20/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i20/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i20/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i20/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i20/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i20/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i20/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i20/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i20/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i20/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i20/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i20/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i20/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i20/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i20/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i20/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i20/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i20/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i20/?action=execute"
+      },
+      "name": "couchpotato",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": [
+        "/sbin/my_init"
+      ],
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-10-31T05:38:08Z",
+      "createdTS": 1446269888000,
+      "data": {
+        "fields": {
+          "requestedHostId": 1,
+          "imageUuid": "docker:needo/couchpotato",
+          "networkMode": "bridge",
+          "networkIds": [
+            4
+          ],
+          "dataVolumes": [
+            "/config",
+            "/etc/docker/couchpotato:/config",
+            "/mnt/nas:/data",
+            "/etc/localtime:/etc/localtime:ro"
+          ],
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.26",
+          "dockerPorts": {
+            "5050/tcp": "5050"
+          },
+          "memory": null,
+          "cpuSet": null,
+          "cpuShares": null,
+          "memorySwap": null,
+          "domainName": null,
+          "user": null,
+          "tty": false,
+          "stdinOpen": false,
+          "workingDir": null,
+          "environment": {
+            "HOME": "/root",
+            "LANGUAGE": "en_US.UTF-8",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "DEBIAN_FRONTEND": "noninteractive",
+            "LC_ALL": "C.UTF-8",
+            "EDGE": "1",
+            "LANG": "en_US.UTF-8"
+          },
+          "command": [
+            "/sbin/my_init"
+          ],
+          "entryPoint": [],
+          "volumeDriver": null,
+          "ports": [
+            "5050:5050/tcp"
+          ],
+          "privileged": false,
+          "publishAllPorts": false,
+          "lxcConf": {},
+          "dns": [],
+          "dnsSearch": [],
+          "capAdd": [],
+          "capDrop": [],
+          "restartPolicy": {
+            "name": "no",
+            "maximumRetryCount": 0
+          },
+          "devices": [],
+          "securityOpt": null,
+          "pidMode": null,
+          "readOnly": false,
+          "extraHosts": null,
+          "logConfig": {
+            "driver": "json-file",
+            "config": {}
+          },
+          "labels": {},
+          "primaryIpAddress": "172.17.0.26",
+          "transitioningMessage": "Post-network"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 10051,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "2015-10-31T13:02:46.607967884Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-10-31T13:02:54.2405314Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "couchpotato",
+            "Entrypoint": null,
+            "Env": [
+              "EDGE=1",
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "HOME=/root",
+              "DEBIAN_FRONTEND=noninteractive",
+              "LC_ALL=C.UTF-8",
+              "LANG=en_US.UTF-8",
+              "LANGUAGE=en_US.UTF-8"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/sbin/my_init"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/config": {}
+            },
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "needo/couchpotato",
+            "Labels": {},
+            "ExposedPorts": {
+              "5050/tcp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a/hosts",
+          "Args": [],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/sbin/my_init",
+          "HostnamePath": "/var/lib/docker/containers/2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a/hostname",
+          "VolumesRW": {
+            "/config": true,
+            "/etc/localtime": false,
+            "/data": true
+          },
+          "RestartCount": 0,
+          "Name": "/couchpotato",
+          "Created": "2015-10-31T05:38:07.089535095Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/config": "/etc/docker/couchpotato",
+            "/etc/localtime": "/etc/localtime",
+            "/data": "/mnt/nas"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "f93df92527aa814e12ebf4c6baa900e031bf93518e478105bff8249dd6339ca9",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "989449dd5b545cac38f5be5ac1db6529648736716bb2bcf30996133da0dd4ccc",
+            "SandboxKey": "/var/run/docker/netns/2991dbf96cf8",
+            "MacAddress": "02:42:ac:11:00:1a",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.26",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "5050/tcp": [
+                {
+                  "HostPort": "5050",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "196d8d33f934fa545f1310ef024d15694d584af551b6ba52e43491875d8344b0",
+          "LogPath": "/var/lib/docker/containers/2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a/2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": -1,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "no"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": [],
+            "Devices": [],
+            "Binds": [
+              "/etc/docker/couchpotato:/config",
+              "/mnt/nas:/data",
+              "/etc/localtime:/etc/localtime:ro"
+            ],
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": [
+              "/sabnzbd:/couchpotato/sabnzbd",
+              "/transmission:/couchpotato/transmission"
+            ],
+            "IpcMode": "",
+            "PortBindings": {
+              "5050/tcp": [
+                {
+                  "HostPort": "5050",
+                  "HostIp": ""
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up 7 seconds",
+          "Created": 1446269887,
+          "Image": "needo/couchpotato",
+          "Labels": {},
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 5050,
+              "PrivatePort": 5050
+            }
+          ],
+          "Command": "/sbin/my_init",
+          "Names": [
+            "/couchpotato"
+          ],
+          "Id": "2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [
+        "/config",
+        "/etc/docker/couchpotato:/config",
+        "/mnt/nas:/data",
+        "/etc/localtime:/etc/localtime:ro"
+      ],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": [],
+      "environment": {
+        "HOME": "/root",
+        "LANGUAGE": "en_US.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DEBIAN_FRONTEND": "noninteractive",
+        "LC_ALL": "C.UTF-8",
+        "EDGE": "1",
+        "LANG": "en_US.UTF-8"
+      },
+      "expose": null,
+      "externalId": "2991dbf96cf8356c6158bc13f34d14ae08b956d940c28dc7b47c98c51e3f2b7a",
+      "extraHosts": null,
+      "firstRunning": "2015-10-31T05:38:22Z",
+      "firstRunningTS": 1446269902000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": "couchpotato",
+      "imageUuid": "docker:needo/couchpotato",
+      "kind": "container",
+      "labels": {},
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "lxcConf": {},
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": true,
+      "networkContainerId": null,
+      "networkMode": "bridge",
+      "pidMode": null,
+      "ports": [
+        "5050:5050/tcp"
+      ],
+      "primaryIpAddress": "172.17.0.26",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": "1h1",
+      "restartPolicy": {
+        "name": "no",
+        "maximumRetryCount": 0
+      },
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": false,
+      "systemContainer": null,
+      "token": "XyZ8J3d9iwbrVmQrbyd9jiBKPn56WTxD1rlkRs3KexLjxYJQT7Fm4fRMygAedapNIxC8XWOsdDHrcfS2IOQ",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": false,
+      "user": null,
+      "uuid": "18cec986-d777-494d-a803-edf95722012f",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i21",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i21",
+        "account": "http://192.168.1.51:8080/v1/containers/1i21/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i21/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i21/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i21/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i21/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i21/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i21/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i21/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i21/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i21/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i21/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i21/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i21/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i21/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i21/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i21/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i21/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i21/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i21/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i21/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i21/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i21/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i21/?action=execute"
+      },
+      "name": "plex",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": [
+        "/start.sh"
+      ],
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": null,
+      "created": "2015-11-01T01:48:06Z",
+      "createdTS": 1446342486000,
+      "data": {
+        "fields": {
+          "requestedHostId": 1,
+          "imageUuid": "docker:timhaak/plex",
+          "networkMode": "bridge",
+          "networkIds": [
+            4
+          ],
+          "dataVolumes": [
+            "/config",
+            "/data",
+            "/etc/docker/plex:/config",
+            "/usr/local/plex:/data",
+            "/transcode:/tmp"
+          ],
+          "transitioningMessage": "Post-network",
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.8",
+          "dockerPorts": {
+            "32400/tcp": "32400"
+          },
+          "memory": null,
+          "cpuSet": null,
+          "cpuShares": null,
+          "memorySwap": null,
+          "domainName": null,
+          "user": null,
+          "tty": false,
+          "stdinOpen": false,
+          "workingDir": null,
+          "environment": {
+            "TERM": "xterm",
+            "CHANGE_DIR_RIGHTS": "false",
+            "LANGUAGE": "en_US.UTF-8",
+            "RUN_AS_ROOT": "true",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "DEBIAN_FRONTEND": "noninteractive",
+            "LC_ALL": "en_US.UTF-8",
+            "LANG": "en_US.UTF-8"
+          },
+          "command": [
+            "/start.sh"
+          ],
+          "entryPoint": [],
+          "volumeDriver": null,
+          "ports": [
+            "32400:32400/tcp"
+          ],
+          "privileged": false,
+          "publishAllPorts": false,
+          "lxcConf": {},
+          "dns": [],
+          "dnsSearch": [],
+          "capAdd": [],
+          "capDrop": [],
+          "restartPolicy": {
+            "name": "no",
+            "maximumRetryCount": 0
+          },
+          "devices": [],
+          "securityOpt": null,
+          "pidMode": null,
+          "readOnly": false,
+          "extraHosts": null,
+          "logConfig": {
+            "driver": "json-file",
+            "config": {}
+          },
+          "labels": {},
+          "primaryIpAddress": "172.17.0.8"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 16802,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-11-01T01:15:56.936080497Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "plex",
+            "Entrypoint": null,
+            "Env": [
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "DEBIAN_FRONTEND=noninteractive",
+              "LANG=en_US.UTF-8",
+              "LC_ALL=en_US.UTF-8",
+              "LANGUAGE=en_US.UTF-8",
+              "TERM=xterm",
+              "RUN_AS_ROOT=true",
+              "CHANGE_DIR_RIGHTS=false"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": false,
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "/start.sh"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/config": {},
+              "/data": {}
+            },
+            "Tty": false,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "timhaak/plex",
+            "Labels": {},
+            "ExposedPorts": {
+              "32400/tcp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87/hosts",
+          "Args": [],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/start.sh",
+          "HostnamePath": "/var/lib/docker/containers/28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87/hostname",
+          "VolumesRW": {
+            "/config": true,
+            "/data": true,
+            "/tmp": true
+          },
+          "RestartCount": 0,
+          "Name": "/plex",
+          "Created": "2015-11-01T01:15:56.536595455Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/config": "/etc/docker/plex",
+            "/data": "/usr/local/plex",
+            "/tmp": "/transcode"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "199d8ed56f360344b50040ecf0a7823f7209c2982e656ab2178f7a05878df46d",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "d51dbac4a50db45bc6c73a9d70dc62b225c93fe9ab57ccef70342343de44c099",
+            "SandboxKey": "/var/run/docker/netns/28ac4cae93e4",
+            "MacAddress": "02:42:ac:11:00:08",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.8",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "32400/tcp": [
+                {
+                  "HostPort": "32400",
+                  "HostIp": "0.0.0.0"
+                }
+              ]
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "79475c2737c991ec9dd46b3665aa1ad9ce9069ad8446930386798732601ef467",
+          "LogPath": "/var/lib/docker/containers/28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87/28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": -1,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": null,
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "no"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": [],
+            "Devices": [],
+            "Binds": [
+              "/etc/docker/plex:/config",
+              "/usr/local/plex:/data",
+              "/transcode:/tmp"
+            ],
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": {
+              "32400/tcp": [
+                {
+                  "HostPort": "32400",
+                  "HostIp": ""
+                }
+              ]
+            },
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up 32 minutes",
+          "Created": 1446340556,
+          "Image": "timhaak/plex",
+          "Labels": {},
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "IP": "0.0.0.0",
+              "Type": "tcp",
+              "PublicPort": 32400,
+              "PrivatePort": 32400
+            }
+          ],
+          "Command": "/start.sh",
+          "Names": [
+            "/plex"
+          ],
+          "Id": "28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [
+        "/config",
+        "/data",
+        "/etc/docker/plex:/config",
+        "/usr/local/plex:/data",
+        "/transcode:/tmp"
+      ],
+      "dataVolumesFrom": null,
+      "deploymentUnitUuid": null,
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": [],
+      "environment": {
+        "TERM": "xterm",
+        "CHANGE_DIR_RIGHTS": "false",
+        "LANGUAGE": "en_US.UTF-8",
+        "RUN_AS_ROOT": "true",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DEBIAN_FRONTEND": "noninteractive",
+        "LC_ALL": "en_US.UTF-8",
+        "LANG": "en_US.UTF-8"
+      },
+      "expose": null,
+      "externalId": "28ac4cae93e4d9eb06ed2cabb044bb2fc7426f6f49e5d6d7280b8a7fc9f2fe87",
+      "extraHosts": null,
+      "firstRunning": "2015-11-01T01:49:00Z",
+      "firstRunningTS": 1446342540000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": "plex",
+      "imageUuid": "docker:timhaak/plex",
+      "kind": "container",
+      "labels": {},
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "lxcConf": {},
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": true,
+      "networkContainerId": null,
+      "networkMode": "bridge",
+      "pidMode": null,
+      "ports": [
+        "32400:32400/tcp"
+      ],
+      "primaryIpAddress": "172.17.0.8",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": "1h1",
+      "restartPolicy": {
+        "name": "no",
+        "maximumRetryCount": 0
+      },
+      "securityOpt": null,
+      "startOnCreate": null,
+      "stdinOpen": false,
+      "systemContainer": null,
+      "token": "TvRk2xMksWsCusYXONY4XAewbHAucdyAgXCiH79GbxxLkLCpLudBftl5BNGK9i9IGz9gXgiDkXWIhx6h0A",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": false,
+      "user": null,
+      "uuid": "1d2e63b3-967d-4129-97be-99d7e116f15d",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    },
+    {
+      "id": "1i23",
+      "type": "container",
+      "links": {
+        "self": "http://192.168.1.51:8080/v1/containers/1i23",
+        "account": "http://192.168.1.51:8080/v1/containers/1i23/account",
+        "credentials": "http://192.168.1.51:8080/v1/containers/1i23/credentials",
+        "hosts": "http://192.168.1.51:8080/v1/containers/1i23/hosts",
+        "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i23/instancelabels",
+        "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i23/instancelinks",
+        "instances": "http://192.168.1.51:8080/v1/containers/1i23/instances",
+        "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i23/loadbalancertargets",
+        "mounts": "http://192.168.1.51:8080/v1/containers/1i23/mounts",
+        "ports": "http://192.168.1.51:8080/v1/containers/1i23/ports",
+        "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i23/serviceevents",
+        "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i23/serviceexposemaps",
+        "services": "http://192.168.1.51:8080/v1/containers/1i23/services",
+        "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i23/targetinstancelinks",
+        "volumes": "http://192.168.1.51:8080/v1/containers/1i23/volumes",
+        "stats": "http://192.168.1.51:8080/v1/containers/1i23/stats",
+        "containerStats": "http://192.168.1.51:8080/v1/containers/1i23/containerstats"
+      },
+      "actions": {
+        "update": "http://192.168.1.51:8080/v1/containers/1i23/?action=update",
+        "stop": "http://192.168.1.51:8080/v1/containers/1i23/?action=stop",
+        "restart": "http://192.168.1.51:8080/v1/containers/1i23/?action=restart",
+        "migrate": "http://192.168.1.51:8080/v1/containers/1i23/?action=migrate",
+        "logs": "http://192.168.1.51:8080/v1/containers/1i23/?action=logs",
+        "setlabels": "http://192.168.1.51:8080/v1/containers/1i23/?action=setlabels",
+        "execute": "http://192.168.1.51:8080/v1/containers/1i23/?action=execute"
+      },
+      "name": "Default_mongo_1",
+      "state": "running",
+      "accountId": "1a5",
+      "agentId": null,
+      "allocationState": "active",
+      "build": null,
+      "capAdd": [],
+      "capDrop": [],
+      "command": null,
+      "cpuSet": null,
+      "cpuShares": null,
+      "createIndex": 1,
+      "created": "2015-11-01T16:49:55Z",
+      "createdTS": 1446396595000,
+      "data": {
+        "fields": {
+          "imageUuid": "docker:mongo",
+          "publishAllPorts": false,
+          "startOnCreate": true,
+          "labels": {
+            "io.rancher.project.name": "Default",
+            "io.rancher.service.deployment.unit": "1c04d05d-a795-409c-9993-781e28eec416",
+            "io.rancher.service.launch.config": "io.rancher.service.primary.launch.config",
+            "io.rancher.project_service.name": "Default/mongo",
+            "io.rancher.scheduler.affinity:container_label_soft": "io.rancher.service.deployment.unit=1c04d05d-a795-409c-9993-781e28eec416",
+            "io.rancher.stack.name": "Default",
+            "io.rancher.stack_service.name": "Default/mongo"
+          },
+          "dns": [],
+          "networkMode": "managed",
+          "stdinOpen": true,
+          "dnsSearch": [],
+          "readOnly": false,
+          "dataVolumesFrom": [],
+          "capAdd": [],
+          "tty": true,
+          "capDrop": [],
+          "dataVolumes": [],
+          "privileged": false,
+          "restartPolicy": {
+            "name": "always"
+          },
+          "devices": [],
+          "networkIds": [
+            5
+          ],
+          "transitioningMessage": "Post-network",
+          "transitioningProgress": 95,
+          "dockerHostIp": "172.17.42.1",
+          "dockerIp": "172.17.0.12",
+          "dockerPorts": {
+            "27017/tcp": null
+          },
+          "primaryIpAddress": "10.42.91.214"
+        },
+        "dockerInspect": {
+          "State": {
+            "Pid": 32001,
+            "OOMKilled": false,
+            "Dead": false,
+            "Paused": false,
+            "Running": true,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Restarting": false,
+            "Error": "",
+            "StartedAt": "2015-11-01T16:50:44.805838797Z",
+            "ExitCode": 0
+          },
+          "Config": {
+            "MemorySwap": 0,
+            "Hostname": "6c5f83215bd4",
+            "Entrypoint": [
+              "/entrypoint.sh"
+            ],
+            "Env": [
+              "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "MONGO_MAJOR=3.0",
+              "MONGO_VERSION=3.0.7"
+            ],
+            "Memory": 0,
+            "OnBuild": null,
+            "OpenStdin": true,
+            "MacAddress": "02:20:1c:d1:9f:e3",
+            "Cpuset": "",
+            "User": "",
+            "CpuShares": 0,
+            "AttachStdout": false,
+            "StdinOnce": false,
+            "Cmd": [
+              "mongod"
+            ],
+            "WorkingDir": "",
+            "AttachStdin": false,
+            "Volumes": {
+              "/data/db": {}
+            },
+            "Tty": true,
+            "AttachStderr": false,
+            "Domainname": "",
+            "Image": "mongo:latest",
+            "Labels": {
+              "io.rancher.project_service.name": "Default/mongo",
+              "io.rancher.project.name": "Default",
+              "io.rancher.service.deployment.unit": "1c04d05d-a795-409c-9993-781e28eec416",
+              "io.rancher.stack_service.name": "Default/mongo",
+              "io.rancher.scheduler.affinity:container_label_soft": "io.rancher.service.deployment.unit=1c04d05d-a795-409c-9993-781e28eec416",
+              "io.rancher.container.uuid": "a208ba0c-e544-49a7-9d8c-f9d868f21144",
+              "io.rancher.stack.name": "Default",
+              "io.rancher.service.launch.config": "io.rancher.service.primary.launch.config",
+              "io.rancher.container.ip": "10.42.91.214/16"
+            },
+            "ExposedPorts": {
+              "27017/tcp": {}
+            }
+          },
+          "ResolvConfPath": "/var/lib/docker/containers/6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361/resolv.conf",
+          "HostsPath": "/var/lib/docker/containers/6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361/hosts",
+          "Args": [
+            "mongod"
+          ],
+          "Driver": "aufs",
+          "ExecDriver": "native-0.2",
+          "Path": "/entrypoint.sh",
+          "HostnamePath": "/var/lib/docker/containers/6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361/hostname",
+          "VolumesRW": {
+            "/data/db": true
+          },
+          "RestartCount": 0,
+          "Name": "/a208ba0c-e544-49a7-9d8c-f9d868f21144",
+          "Created": "2015-11-01T16:50:44.355203175Z",
+          "GraphDriver": {
+            "Data": null,
+            "Name": "aufs"
+          },
+          "Volumes": {
+            "/data/db": "/var/lib/docker/volumes/8835401b270add3ccbdacc174d0e77ebdc7b3e49bb5875790bd1f031d4e3c0b6/_data"
+          },
+          "ExecIDs": null,
+          "ProcessLabel": "",
+          "NetworkSettings": {
+            "NetworkID": "199d8ed56f360344b50040ecf0a7823f7209c2982e656ab2178f7a05878df46d",
+            "Bridge": "",
+            "GlobalIPv6PrefixLen": 0,
+            "LinkLocalIPv6Address": "",
+            "HairpinMode": false,
+            "IPv6Gateway": "",
+            "SecondaryIPAddresses": null,
+            "PortMapping": null,
+            "GlobalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "EndpointID": "52fc5f6a05deb359caf7a3dc0036401d07705285ac6646f3a634542cee3b1083",
+            "SandboxKey": "/var/run/docker/netns/6c5f83215bd4",
+            "MacAddress": "02:20:1c:d1:9f:e3",
+            "SecondaryIPv6Addresses": null,
+            "IPPrefixLen": 16,
+            "IPAddress": "172.17.0.12",
+            "Gateway": "172.17.42.1",
+            "Ports": {
+              "27017/tcp": null
+            }
+          },
+          "AppArmorProfile": "",
+          "Image": "a276bab7ffde10729c0dd88dad2d29e513da07a0c059cbf7da352fb4675de67c",
+          "LogPath": "/var/lib/docker/containers/6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361/6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361-json.log",
+          "HostConfig": {
+            "CpuPeriod": 0,
+            "MemorySwappiness": null,
+            "ContainerIDFile": "",
+            "CpusetMems": "",
+            "Dns": [],
+            "Memory": 0,
+            "DnsSearch": null,
+            "Privileged": false,
+            "Ulimits": null,
+            "CpusetCpus": "",
+            "PidMode": "",
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "RestartPolicy": {
+              "MaximumRetryCount": 0,
+              "Name": "always"
+            },
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "CpuShares": 0,
+            "GroupAdd": null,
+            "OomKillDisable": false,
+            "ConsoleSize": [
+              0,
+              0
+            ],
+            "NetworkMode": "default",
+            "LxcConf": null,
+            "Devices": null,
+            "Binds": null,
+            "CpuQuota": 0,
+            "MemorySwap": 0,
+            "UTSMode": "",
+            "ExtraHosts": null,
+            "VolumesFrom": null,
+            "CapDrop": null,
+            "Links": null,
+            "IpcMode": "",
+            "PortBindings": null,
+            "SecurityOpt": null,
+            "CapAdd": null,
+            "LogConfig": {
+              "Config": {},
+              "Type": "json-file"
+            }
+          },
+          "Id": "6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361",
+          "MountLabel": ""
+        },
+        "dockerContainer": {
+          "Status": "Up Less than a second",
+          "Created": 1446396644,
+          "Image": "mongo:latest",
+          "Labels": {
+            "io.rancher.project_service.name": "Default/mongo",
+            "io.rancher.project.name": "Default",
+            "io.rancher.service.deployment.unit": "1c04d05d-a795-409c-9993-781e28eec416",
+            "io.rancher.stack_service.name": "Default/mongo",
+            "io.rancher.scheduler.affinity:container_label_soft": "io.rancher.service.deployment.unit=1c04d05d-a795-409c-9993-781e28eec416",
+            "io.rancher.container.uuid": "a208ba0c-e544-49a7-9d8c-f9d868f21144",
+            "io.rancher.stack.name": "Default",
+            "io.rancher.service.launch.config": "io.rancher.service.primary.launch.config",
+            "io.rancher.container.ip": "10.42.91.214/16"
+          },
+          "HostConfig": {
+            "NetworkMode": "default"
+          },
+          "Ports": [
+            {
+              "Type": "tcp",
+              "PrivatePort": 27017
+            }
+          ],
+          "Command": "/entrypoint.sh mongod",
+          "Names": [
+            "/a208ba0c-e544-49a7-9d8c-f9d868f21144"
+          ],
+          "Id": "6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361"
+        }
+      },
+      "dataVolumeMounts": null,
+      "dataVolumes": [],
+      "dataVolumesFrom": [],
+      "deploymentUnitUuid": "1c04d05d-a795-409c-9993-781e28eec416",
+      "description": null,
+      "devices": [],
+      "dns": [],
+      "dnsSearch": [],
+      "domainName": null,
+      "entryPoint": null,
+      "environment": null,
+      "expose": null,
+      "externalId": "6c5f83215bd42ca8ef557fdc38ddf93e7a14020e2fff2a9a2a5be64f9f2d9361",
+      "extraHosts": null,
+      "firstRunning": "2015-11-01T16:50:57Z",
+      "firstRunningTS": 1446396657000,
+      "healthCheck": null,
+      "healthState": null,
+      "hostname": null,
+      "imageUuid": "docker:mongo",
+      "kind": "container",
+      "labels": {
+        "io.rancher.project.name": "Default",
+        "io.rancher.service.deployment.unit": "1c04d05d-a795-409c-9993-781e28eec416",
+        "io.rancher.service.launch.config": "io.rancher.service.primary.launch.config",
+        "io.rancher.project_service.name": "Default/mongo",
+        "io.rancher.scheduler.affinity:container_label_soft": "io.rancher.service.deployment.unit=1c04d05d-a795-409c-9993-781e28eec416",
+        "io.rancher.stack.name": "Default",
+        "io.rancher.stack_service.name": "Default/mongo"
+      },
+      "logConfig": null,
+      "lxcConf": null,
+      "memory": null,
+      "memorySwap": null,
+      "nativeContainer": false,
+      "networkContainerId": null,
+      "networkMode": "managed",
+      "pidMode": null,
+      "ports": null,
+      "primaryIpAddress": "10.42.91.214",
+      "privileged": false,
+      "publishAllPorts": false,
+      "readOnly": false,
+      "registryCredentialId": null,
+      "removeTime": null,
+      "removed": null,
+      "requestedHostId": null,
+      "restartPolicy": {
+        "name": "always"
+      },
+      "securityOpt": null,
+      "startOnCreate": true,
+      "stdinOpen": true,
+      "systemContainer": null,
+      "token": "iKqkwFzEoiOhoCqEHzzUPIZPOqsUGbsAIgm72aLeL1XupQkLdJnmNiYnAlJDP2I428STXvdnadFC1bLmh8g",
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "tty": true,
+      "user": null,
+      "uuid": "a208ba0c-e544-49a7-9d8c-f9d868f21144",
+      "version": "0",
+      "volumeDriver": null,
+      "workingDir": null
+    }
+  ],
+  "sortLinks": {
+    "accountId": "http://192.168.1.51:8080/v1/containers?sort=accountId",
+    "agentId": "http://192.168.1.51:8080/v1/containers?sort=agentId",
+    "allocationState": "http://192.168.1.51:8080/v1/containers?sort=allocationState",
+    "compute": "http://192.168.1.51:8080/v1/containers?sort=compute",
+    "createIndex": "http://192.168.1.51:8080/v1/containers?sort=createIndex",
+    "created": "http://192.168.1.51:8080/v1/containers?sort=created",
+    "deploymentUnitUuid": "http://192.168.1.51:8080/v1/containers?sort=deploymentUnitUuid",
+    "description": "http://192.168.1.51:8080/v1/containers?sort=description",
+    "domain": "http://192.168.1.51:8080/v1/containers?sort=domain",
+    "externalId": "http://192.168.1.51:8080/v1/containers?sort=externalId",
+    "firstRunning": "http://192.168.1.51:8080/v1/containers?sort=firstRunning",
+    "healthState": "http://192.168.1.51:8080/v1/containers?sort=healthState",
+    "hostname": "http://192.168.1.51:8080/v1/containers?sort=hostname",
+    "id": "http://192.168.1.51:8080/v1/containers?sort=id",
+    "imageId": "http://192.168.1.51:8080/v1/containers?sort=imageId",
+    "instanceTriggeredStop": "http://192.168.1.51:8080/v1/containers?sort=instanceTriggeredStop",
+    "kind": "http://192.168.1.51:8080/v1/containers?sort=kind",
+    "memoryMb": "http://192.168.1.51:8080/v1/containers?sort=memoryMb",
+    "name": "http://192.168.1.51:8080/v1/containers?sort=name",
+    "nativeContainer": "http://192.168.1.51:8080/v1/containers?sort=nativeContainer",
+    "networkContainerId": "http://192.168.1.51:8080/v1/containers?sort=networkContainerId",
+    "offeringId": "http://192.168.1.51:8080/v1/containers?sort=offeringId",
+    "registryCredentialId": "http://192.168.1.51:8080/v1/containers?sort=registryCredentialId",
+    "removeTime": "http://192.168.1.51:8080/v1/containers?sort=removeTime",
+    "removed": "http://192.168.1.51:8080/v1/containers?sort=removed",
+    "startCount": "http://192.168.1.51:8080/v1/containers?sort=startCount",
+    "state": "http://192.168.1.51:8080/v1/containers?sort=state",
+    "systemContainer": "http://192.168.1.51:8080/v1/containers?sort=systemContainer",
+    "token": "http://192.168.1.51:8080/v1/containers?sort=token",
+    "userdata": "http://192.168.1.51:8080/v1/containers?sort=userdata",
+    "uuid": "http://192.168.1.51:8080/v1/containers?sort=uuid",
+    "version": "http://192.168.1.51:8080/v1/containers?sort=version",
+    "zoneId": "http://192.168.1.51:8080/v1/containers?sort=zoneId"
+  },
+  "pagination": {
+    "first": null,
+    "previous": null,
+    "next": null,
+    "limit": 100,
+    "total": null,
+    "partial": false
+  },
+  "sort": null,
+  "filters": {
+    "accountId": null,
+    "agentId": null,
+    "allocationState": null,
+    "compute": null,
+    "createIndex": null,
+    "created": null,
+    "deploymentUnitUuid": null,
+    "description": null,
+    "domain": null,
+    "externalId": null,
+    "firstRunning": null,
+    "healthState": null,
+    "hostname": null,
+    "id": null,
+    "imageId": null,
+    "instanceTriggeredStop": null,
+    "kind": null,
+    "memoryMb": null,
+    "name": null,
+    "nativeContainer": null,
+    "networkContainerId": null,
+    "offeringId": null,
+    "registryCredentialId": null,
+    "removeTime": null,
+    "removed": null,
+    "startCount": null,
+    "state": null,
+    "systemContainer": null,
+    "token": null,
+    "userdata": null,
+    "uuid": null,
+    "version": null,
+    "zoneId": null
+  },
+  "createDefaults": {}
+}

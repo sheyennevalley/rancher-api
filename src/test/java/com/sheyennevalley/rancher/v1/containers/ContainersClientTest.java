@@ -1,11 +1,10 @@
-package com.sheyennevalley.rancher.v1.services;
+package com.sheyennevalley.rancher.v1.containers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sheyennevalley.rancher.RancherResponse;
 import com.sheyennevalley.rancher.v1.BaseClient;
 import com.sheyennevalley.rancher.v1.Response;
-import com.sheyennevalley.rancher.v1.services.model.Service;
-import org.apache.commons.io.FileUtils;
+import com.sheyennevalley.rancher.v1.containers.model.Container;
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,31 +21,30 @@ import static org.mockito.Mockito.when;
  * Created by justin on 11/1/15.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ServicesClientTest {
+public class ContainersClientTest {
 
-    private ServicesClient servicesClient;
+    private ContainersClient containersClient;
 
     @Mock
-    BaseClient baseClient;
+    private BaseClient baseClient;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ObjectMapper mapper = new ObjectMapper();
-        servicesClient = new ServicesRancherClient(baseClient, mapper);
-        when(baseClient.makeGetRequest("/v1/services")).thenReturn(buildResponse());
+        containersClient = new ContainersRancherClient(baseClient, mapper);
+        when(baseClient.makeGetRequest("/v1/containers")).thenReturn(buildResponse());
     }
 
     @Test
-    public void shouldReturnServicesFromRancher(){
-        Response<List<Service>> response = servicesClient.getServices();
-        assertTrue(response.getValue().get(0).getId().equals("1s6"));
-
+    public void shouldReturnContianersResponse(){
+        Response<List<Container>> response = containersClient.getContainers();
+        assertTrue(response.getValue().get(0).getId().equals("1i7"));
     }
 
     private RancherResponse buildResponse(){
         try {
             String content = IOUtils.toString(
-                    getClass().getResourceAsStream("/services.json"), "UTF-8");
+                    getClass().getResourceAsStream("/containers.json"), "UTF-8");
             return new RancherResponse(200, "Success", content);
         } catch (Exception e){
             e.printStackTrace();
