@@ -1,5 +1,6 @@
 package com.sheyennevalley.rancher.v1.services;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sheyennevalley.rancher.RancherResponse;
 import com.sheyennevalley.rancher.v1.BaseClient;
@@ -28,7 +29,9 @@ public class ServicesRancherClient implements ServicesClient {
 
         if (response.getStatusCode() == 200) {
             try {
-                List<Service> services = objectMapper.readValue(response.getContent(), objectMapper.getTypeFactory().constructCollectionType(List.class, Service.class));
+                JsonNode rootNode = objectMapper.readValue(response.getContent(), JsonNode.class);
+                JsonNode data = rootNode.get("data");
+                List<Service> services = objectMapper.readValue(data.toString(), objectMapper.getTypeFactory().constructCollectionType(List.class, Service.class));
                 return new Response<List<Service>>(services);
             } catch (Exception e){
                 throw new RancherException(e);

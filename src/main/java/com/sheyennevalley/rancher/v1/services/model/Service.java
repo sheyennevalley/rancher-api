@@ -1,37 +1,45 @@
 package com.sheyennevalley.rancher.v1.services.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by justin on 10/31/15.
  */
 @Data
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Service {
 
-    @JsonProperty("id")
     private String id;
-    @JsonProperty("type")
     private String type;
-    @JsonProperty("links")
-    private Map<String,String> links;
-    @JsonProperty("actions")
-    private Map<String,String> actions;
-    @JsonProperty("name")
+    private Map<String, String> links;
+    private Map<String, String> actions;
     private String name;
-    @JsonProperty("state")
     private String state;
-    @JsonProperty("accountId")
     private String accountId;
-    @JsonProperty("createIndex")
     private String createIndex;
-    @JsonProperty("created")
     private Date created;
-
+    private LaunchConfig launchConfig;
+    private String description;
+    private String environmentId;
+    private String kind;
+    private String metadata;
+    private String previousLaunchConfig;
+    private String previousSecondaryLaunchConfigs;
+    private String removeTime;
+    private String removed;
+    private String scale;
+    private List<String> secondaryLaunchConfigs;
+    private String selectorContainer;
+    private String selectorLink;
+    private String transitioning;
+    private String transitioningMessage;
+    private String transitioningProgress;
+    private String upgrade;
+    private String uuid;
+    private String vip;
 }

@@ -42,7 +42,7 @@ public class ServicesClientTest {
     @Test
     public void shouldReturnServicesFromRancher(){
         Response<List<Service>> response = servicesClient.getServices();
-        assertTrue(response.getValue().get(0).equals(new Service()));
+        assertTrue(response.getValue().get(0).getId().equals("1s6"));
 
     }
 
