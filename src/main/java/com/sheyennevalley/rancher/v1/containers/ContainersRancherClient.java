@@ -7,7 +7,6 @@ import com.sheyennevalley.rancher.v1.BaseClient;
 import com.sheyennevalley.rancher.v1.RancherException;
 import com.sheyennevalley.rancher.v1.Response;
 import com.sheyennevalley.rancher.v1.containers.model.Container;
-import com.sheyennevalley.rancher.v1.services.model.Service;
 
 import java.util.List;
 
