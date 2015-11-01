@@ -29,18 +29,6 @@ public class BaseClient {
         this(DEFAULT_HTTP_TRANSPORT, agentHost, agentPort);
     }
 
-    public BaseClient(HttpClient httpClient) {
-        this(DEFAULT_HOST, httpClient);
-    }
-
-    public BaseClient(String agentHost, HttpClient httpClient) {
-        this(new DefaultHttpTransport(httpClient), agentHost, DEFAULT_PORT);
-    }
-
-    public BaseClient(String agentHost, int agentPort, HttpClient httpClient) {
-        this(new DefaultHttpTransport(httpClient), agentHost, agentPort);
-    }
-
     // hidden constructor, for tests
     BaseClient(HttpTransport httpTransport, String agentHost, int agentPort) {
         this.httpTransport = httpTransport;
