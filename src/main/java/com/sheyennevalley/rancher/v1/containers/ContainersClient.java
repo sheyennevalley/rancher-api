@@ -12,4 +12,5 @@ public interface ContainersClient {
 
     Response<List<Container>> getContainers();
     Response<Container> getContainer(String id);
+    Response<List<Container>> getContainersByService(String id);
 }
