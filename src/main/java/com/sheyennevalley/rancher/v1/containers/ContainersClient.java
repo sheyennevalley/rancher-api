@@ -11,4 +11,5 @@ import java.util.List;
 public interface ContainersClient {
 
     Response<List<Container>> getContainers();
+    Response<Container> getContainer(String id);
 }

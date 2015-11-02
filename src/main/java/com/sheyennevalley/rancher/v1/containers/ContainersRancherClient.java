@@ -41,4 +41,20 @@ public class ContainersRancherClient implements ContainersClient {
             throw new RancherException(response.getStatusCode() + " - " + response.getStatusMessage());
         }
     }
+
+    @Override
+    public Response<Container> getContainer(String id) {
+        RancherResponse response = baseClient.makeGetRequest("/v1/containers/" + id);
+
+        if (response.getStatusCode() == 200) {
+            try {
+                Container container = objectMapper.readValue(response.getContent(), Container.class);
+                return new Response<Container>(container);
+            } catch (Exception e){
+                throw new RancherException(e);
+            }
+        } else {
+            throw new RancherException(response.getStatusCode() + " - " + response.getStatusMessage());
+        }
+    }
 }

@@ -32,19 +32,27 @@ public class ContainersClientTest {
     public void setUp() {
         ObjectMapper mapper = new ObjectMapper();
         containersClient = new ContainersRancherClient(baseClient, mapper);
-        when(baseClient.makeGetRequest("/v1/containers")).thenReturn(buildResponse());
     }
 
     @Test
     public void shouldReturnContianersResponse(){
+        when(baseClient.makeGetRequest("/v1/containers")).thenReturn(buildResponse("/containers.json"));
         Response<List<Container>> response = containersClient.getContainers();
         assertTrue(response.getValue().get(0).getId().equals("1i7"));
     }
 
-    private RancherResponse buildResponse(){
+    @Test
+    public void shouldReturnRequestedContainer(){
+        when(baseClient.makeGetRequest("/v1/containers/1i7")).thenReturn(buildResponse("/1i7Container.json"));
+        Response<Container> response = containersClient.getContainer("1i7");
+        assertTrue(response.getValue().getId().equals("1i7"));
+
+    }
+
+    private RancherResponse buildResponse(String resource){
         try {
             String content = IOUtils.toString(
-                    getClass().getResourceAsStream("/containers.json"), "UTF-8");
+                    getClass().getResourceAsStream(resource), "UTF-8");
             return new RancherResponse(200, "Success", content);
         } catch (Exception e){
             e.printStackTrace();

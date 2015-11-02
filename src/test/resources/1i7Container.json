@@ -1,0 +1,422 @@
+{
+  "id": "1i7",
+  "type": "container",
+  "links": {
+    "self": "http://192.168.1.51:8080/v1/containers/1i7",
+    "account": "http://192.168.1.51:8080/v1/containers/1i7/account",
+    "credentials": "http://192.168.1.51:8080/v1/containers/1i7/credentials",
+    "hosts": "http://192.168.1.51:8080/v1/containers/1i7/hosts",
+    "instanceLabels": "http://192.168.1.51:8080/v1/containers/1i7/instancelabels",
+    "instanceLinks": "http://192.168.1.51:8080/v1/containers/1i7/instancelinks",
+    "instances": "http://192.168.1.51:8080/v1/containers/1i7/instances",
+    "loadBalancerTargets": "http://192.168.1.51:8080/v1/containers/1i7/loadbalancertargets",
+    "mounts": "http://192.168.1.51:8080/v1/containers/1i7/mounts",
+    "ports": "http://192.168.1.51:8080/v1/containers/1i7/ports",
+    "serviceEvents": "http://192.168.1.51:8080/v1/containers/1i7/serviceevents",
+    "serviceExposeMaps": "http://192.168.1.51:8080/v1/containers/1i7/serviceexposemaps",
+    "services": "http://192.168.1.51:8080/v1/containers/1i7/services",
+    "targetInstanceLinks": "http://192.168.1.51:8080/v1/containers/1i7/targetinstancelinks",
+    "volumes": "http://192.168.1.51:8080/v1/containers/1i7/volumes",
+    "stats": "http://192.168.1.51:8080/v1/containers/1i7/stats",
+    "containerStats": "http://192.168.1.51:8080/v1/containers/1i7/containerstats"
+  },
+  "actions": {
+    "update": "http://192.168.1.51:8080/v1/containers/1i7/?action=update",
+    "stop": "http://192.168.1.51:8080/v1/containers/1i7/?action=stop",
+    "restart": "http://192.168.1.51:8080/v1/containers/1i7/?action=restart",
+    "migrate": "http://192.168.1.51:8080/v1/containers/1i7/?action=migrate",
+    "logs": "http://192.168.1.51:8080/v1/containers/1i7/?action=logs",
+    "setlabels": "http://192.168.1.51:8080/v1/containers/1i7/?action=setlabels",
+    "execute": "http://192.168.1.51:8080/v1/containers/1i7/?action=execute"
+  },
+  "name": "thirsty_kirch",
+  "state": "running",
+  "accountId": "1a5",
+  "agentId": null,
+  "allocationState": "active",
+  "build": null,
+  "capAdd": [],
+  "capDrop": [],
+  "command": [
+    "/usr/bin/s6-svscan",
+    "/service"
+  ],
+  "cpuSet": null,
+  "cpuShares": null,
+  "createIndex": null,
+  "created": "2015-10-30T03:09:01Z",
+  "createdTS": 1446174541000,
+  "data": {
+    "fields": {
+      "requestedHostId": 1,
+      "imageUuid": "docker:rancher/server",
+      "networkMode": "bridge",
+      "networkIds": [
+        4
+      ],
+      "dataVolumes": [
+        "/var/log/mysql",
+        "/var/lib/mysql",
+        "/var/lib/cattle"
+      ],
+      "transitioningMessage": "Post-network",
+      "transitioningProgress": 95,
+      "dockerHostIp": "172.17.42.1",
+      "dockerIp": "172.17.0.2",
+      "dockerPorts": {
+        "8080/tcp": "8080",
+        "3306/tcp": null
+      },
+      "memory": null,
+      "cpuSet": null,
+      "cpuShares": null,
+      "memorySwap": null,
+      "domainName": null,
+      "user": null,
+      "tty": false,
+      "stdinOpen": false,
+      "workingDir": null,
+      "environment": {
+        "CATTLE_USE_LOCAL_ARTIFACTS": "true",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+        "CATTLE_RANCHER_SERVER_IMAGE": "v0.43.1",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+        "CATTLE_HOST_API_PROXY_MODE": "embedded",
+        "DEFAULT_CATTLE_MACHINE_EXECUTE": "true",
+        "CATTLE_DB_CATTLE_DATABASE": "mysql",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DEBIAN_FRONTEND": "noninteractive",
+        "DEFAULT_CATTLE_CATALOG_EXECUTE": "true",
+        "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+        "CATTLE_CATTLE_VERSION": "v0.106.0",
+        "CATTLE_HOME": "/var/lib/cattle",
+        "DEFAULT_CATTLE_API_UI_INDEX": "//releases.rancher.com/ui/0.63.0",
+        "S6_SERVICE_DIR": "/service",
+        "CATTLE_RANCHER_COMPOSE_VERSION": "v0.5.0",
+        "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE": "true"
+      },
+      "command": [
+        "/usr/bin/s6-svscan",
+        "/service"
+      ],
+      "entryPoint": [],
+      "volumeDriver": null,
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "privileged": false,
+      "publishAllPorts": false,
+      "lxcConf": {},
+      "dns": [],
+      "dnsSearch": [],
+      "capAdd": [],
+      "capDrop": [],
+      "restartPolicy": {
+        "name": "always",
+        "maximumRetryCount": 0
+      },
+      "devices": [],
+      "securityOpt": null,
+      "pidMode": null,
+      "readOnly": false,
+      "extraHosts": null,
+      "logConfig": {
+        "driver": "json-file",
+        "config": {}
+      },
+      "labels": {},
+      "primaryIpAddress": "172.17.0.2"
+    },
+    "dockerInspect": {
+      "State": {
+        "Pid": 3158,
+        "OOMKilled": false,
+        "Dead": false,
+        "Paused": false,
+        "Running": true,
+        "FinishedAt": "0001-01-01T00:00:00Z",
+        "Restarting": false,
+        "Error": "",
+        "StartedAt": "2015-10-30T02:58:01.188684457Z",
+        "ExitCode": 0
+      },
+      "Config": {
+        "MemorySwap": 0,
+        "Hostname": "035ee297d093",
+        "Entrypoint": null,
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "DEBIAN_FRONTEND=noninteractive",
+          "CATTLE_HOME=/var/lib/cattle",
+          "DEFAULT_CATTLE_API_UI_INDEX=//releases.rancher.com/ui/0.63.0",
+          "CATTLE_DB_CATTLE_DATABASE=mysql",
+          "CATTLE_USE_LOCAL_ARTIFACTS=true",
+          "S6_SERVICE_DIR=/service",
+          "CATTLE_HOST_API_PROXY_MODE=embedded",
+          "CATTLE_RANCHER_SERVER_IMAGE=v0.43.1",
+          "CATTLE_RANCHER_COMPOSE_VERSION=v0.5.0",
+          "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+          "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+          "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL=https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+          "CATTLE_CATTLE_VERSION=v0.106.0",
+          "DEFAULT_CATTLE_MACHINE_EXECUTE=true",
+          "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE=true",
+          "DEFAULT_CATTLE_CATALOG_EXECUTE=true"
+        ],
+        "Memory": 0,
+        "OnBuild": null,
+        "OpenStdin": false,
+        "Cpuset": "",
+        "User": "",
+        "CpuShares": 0,
+        "AttachStdout": false,
+        "StdinOnce": false,
+        "Cmd": [
+          "/usr/bin/s6-svscan",
+          "/service"
+        ],
+        "WorkingDir": "",
+        "AttachStdin": false,
+        "Volumes": {
+          "/var/log/mysql": {},
+          "/var/lib/mysql": {},
+          "/var/lib/cattle": {}
+        },
+        "Tty": false,
+        "AttachStderr": false,
+        "Domainname": "",
+        "Image": "rancher/server",
+        "Labels": {},
+        "ExposedPorts": {
+          "8080/tcp": {},
+          "3306/tcp": {}
+        }
+      },
+      "ResolvConfPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/resolv.conf",
+      "HostsPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/hosts",
+      "Args": [
+        "/service"
+      ],
+      "Driver": "aufs",
+      "ExecDriver": "native-0.2",
+      "Path": "/usr/bin/s6-svscan",
+      "HostnamePath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/hostname",
+      "VolumesRW": {
+        "/var/log/mysql": true,
+        "/var/lib/mysql": true,
+        "/var/lib/cattle": true
+      },
+      "RestartCount": 0,
+      "Name": "/thirsty_kirch",
+      "Created": "2015-10-30T02:58:00.638221531Z",
+      "GraphDriver": {
+        "Data": null,
+        "Name": "aufs"
+      },
+      "Volumes": {
+        "/var/log/mysql": "/var/lib/docker/volumes/65ec574d281ca0270d3a7afc0c9e52073c51fd9e5f0d67e4e68f37371499f0df/_data",
+        "/var/lib/mysql": "/var/lib/docker/volumes/7c43ebe8b7abde1bfdb3323f5d7682b27b9867d547a6080884adc4bff314f8ae/_data",
+        "/var/lib/cattle": "/var/lib/docker/volumes/9c1f9be932abe55a706956ab8ffdaab61142cdce92606e49100c145361c90f62/_data"
+      },
+      "ExecIDs": null,
+      "ProcessLabel": "",
+      "NetworkSettings": {
+        "NetworkID": "f93df92527aa814e12ebf4c6baa900e031bf93518e478105bff8249dd6339ca9",
+        "Bridge": "",
+        "GlobalIPv6PrefixLen": 0,
+        "LinkLocalIPv6Address": "",
+        "HairpinMode": false,
+        "IPv6Gateway": "",
+        "SecondaryIPAddresses": null,
+        "PortMapping": null,
+        "GlobalIPv6Address": "",
+        "LinkLocalIPv6PrefixLen": 0,
+        "EndpointID": "c3ef9d0a74f5b1b06c2041ab4f6dd151de0d0eeb9f33fd5c58db306f86760040",
+        "SandboxKey": "/var/run/docker/netns/035ee297d093",
+        "MacAddress": "02:42:ac:11:00:02",
+        "SecondaryIPv6Addresses": null,
+        "IPPrefixLen": 16,
+        "IPAddress": "172.17.0.2",
+        "Gateway": "172.17.42.1",
+        "Ports": {
+          "8080/tcp": [
+            {
+              "HostPort": "8080",
+              "HostIp": "0.0.0.0"
+            }
+          ],
+          "3306/tcp": null
+        }
+      },
+      "AppArmorProfile": "",
+      "Image": "5c380d384641e906363c84004d50f472ce108a8cb4f0b5ba1e39504fed2cdb79",
+      "LogPath": "/var/lib/docker/containers/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb/035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb-json.log",
+      "HostConfig": {
+        "CpuPeriod": 0,
+        "MemorySwappiness": -1,
+        "ContainerIDFile": "",
+        "CpusetMems": "",
+        "Dns": null,
+        "Memory": 0,
+        "DnsSearch": null,
+        "Privileged": false,
+        "Ulimits": null,
+        "CpusetCpus": "",
+        "PidMode": "",
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "RestartPolicy": {
+          "MaximumRetryCount": 0,
+          "Name": "always"
+        },
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": false,
+        "CpuShares": 0,
+        "GroupAdd": null,
+        "OomKillDisable": false,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "NetworkMode": "default",
+        "LxcConf": [],
+        "Devices": [],
+        "Binds": null,
+        "CpuQuota": 0,
+        "MemorySwap": 0,
+        "UTSMode": "",
+        "ExtraHosts": null,
+        "VolumesFrom": null,
+        "CapDrop": null,
+        "Links": null,
+        "IpcMode": "",
+        "PortBindings": {
+          "8080/tcp": [
+            {
+              "HostPort": "8080",
+              "HostIp": ""
+            }
+          ]
+        },
+        "SecurityOpt": null,
+        "CapAdd": null,
+        "LogConfig": {
+          "Config": {},
+          "Type": "json-file"
+        }
+      },
+      "Id": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb",
+      "MountLabel": ""
+    },
+    "dockerContainer": {
+      "Status": "Up 12 minutes",
+      "Created": 1446173880,
+      "Image": "rancher/server",
+      "Labels": {},
+      "HostConfig": {
+        "NetworkMode": "default"
+      },
+      "Ports": [
+        {
+          "IP": "0.0.0.0",
+          "Type": "tcp",
+          "PublicPort": 8080,
+          "PrivatePort": 8080
+        },
+        {
+          "Type": "tcp",
+          "PrivatePort": 3306
+        }
+      ],
+      "Command": "/usr/bin/s6-svscan /service",
+      "Names": [
+        "/thirsty_kirch"
+      ],
+      "Id": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb"
+    }
+  },
+  "dataVolumeMounts": null,
+  "dataVolumes": [
+    "/var/log/mysql",
+    "/var/lib/mysql",
+    "/var/lib/cattle"
+  ],
+  "dataVolumesFrom": null,
+  "deploymentUnitUuid": null,
+  "description": null,
+  "devices": [],
+  "dns": [],
+  "dnsSearch": [],
+  "domainName": null,
+  "entryPoint": [],
+  "environment": {
+    "CATTLE_USE_LOCAL_ARTIFACTS": "true",
+    "DEFAULT_CATTLE_RANCHER_COMPOSE_DARWIN_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-darwin-amd64-v0.5.0.tar.gz",
+    "CATTLE_RANCHER_SERVER_IMAGE": "v0.43.1",
+    "DEFAULT_CATTLE_RANCHER_COMPOSE_LINUX_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-linux-amd64-v0.5.0.tar.gz",
+    "CATTLE_HOST_API_PROXY_MODE": "embedded",
+    "DEFAULT_CATTLE_MACHINE_EXECUTE": "true",
+    "CATTLE_DB_CATTLE_DATABASE": "mysql",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "DEFAULT_CATTLE_CATALOG_EXECUTE": "true",
+    "DEFAULT_CATTLE_RANCHER_COMPOSE_WINDOWS_URL": "https://releases.rancher.com/compose/beta/v0.5.0/rancher-compose-windows-386-v0.5.0.zip",
+    "CATTLE_CATTLE_VERSION": "v0.106.0",
+    "CATTLE_HOME": "/var/lib/cattle",
+    "DEFAULT_CATTLE_API_UI_INDEX": "//releases.rancher.com/ui/0.63.0",
+    "S6_SERVICE_DIR": "/service",
+    "CATTLE_RANCHER_COMPOSE_VERSION": "v0.5.0",
+    "DEFAULT_CATTLE_COMPOSE_EXECUTOR_EXECUTE": "true"
+  },
+  "expose": null,
+  "externalId": "035ee297d0931c5827b361bdeb94497ec1073cf5a6a87d089d58204d9d4cfddb",
+  "extraHosts": null,
+  "firstRunning": "2015-10-30T03:10:57Z",
+  "firstRunningTS": 1446174657000,
+  "healthCheck": null,
+  "healthState": null,
+  "hostname": "035ee297d093",
+  "imageUuid": "docker:rancher/server",
+  "kind": "container",
+  "labels": {},
+  "logConfig": {
+    "driver": "json-file",
+    "config": {}
+  },
+  "lxcConf": {},
+  "memory": null,
+  "memorySwap": null,
+  "nativeContainer": true,
+  "networkContainerId": null,
+  "networkMode": "bridge",
+  "pidMode": null,
+  "ports": [
+    "8080:8080/tcp"
+  ],
+  "primaryIpAddress": "172.17.0.2",
+  "privileged": false,
+  "publishAllPorts": false,
+  "readOnly": false,
+  "registryCredentialId": null,
+  "removeTime": null,
+  "removed": null,
+  "requestedHostId": "1h1",
+  "restartPolicy": {
+    "name": "always",
+    "maximumRetryCount": 0
+  },
+  "securityOpt": null,
+  "startOnCreate": null,
+  "stdinOpen": false,
+  "systemContainer": null,
+  "token": "hYm3n5UBwGvEyaDi7QiT8c5vWQuxxtkFWdsdzS85kVZT19MvaTwAJNhngxU7BQRSPs4KXk7I4XpmSloJgjsWQ",
+  "transitioning": "no",
+  "transitioningMessage": null,
+  "transitioningProgress": null,
+  "tty": false,
+  "user": null,
+  "uuid": "1ef6e450-6bb0-42b6-ae62-1906709d6c84",
+  "version": "0",
+  "volumeDriver": null,
+  "workingDir": null
+}

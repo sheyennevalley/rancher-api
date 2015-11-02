@@ -33,6 +33,11 @@ public class RancherClient implements ServicesClient, ContainersClient {
     }
 
     @Override
+    public Response<Container> getContainer(String id) {
+        return containersClient.getContainer(id);
+    }
+
+    @Override
     public Response<List<Service>> getServices() {
         return servicesClient.getServices();
     }
