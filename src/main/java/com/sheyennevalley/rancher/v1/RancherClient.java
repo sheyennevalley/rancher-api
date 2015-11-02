@@ -38,7 +38,17 @@ public class RancherClient implements ServicesClient, ContainersClient {
     }
 
     @Override
+    public Response<List<Container>> getContainersByService(String id) {
+        return containersClient.getContainersByService(id);
+    }
+
+    @Override
     public Response<List<Service>> getServices() {
         return servicesClient.getServices();
+    }
+
+    @Override
+    public Response<Service> getService(String id) {
+        return servicesClient.getService(id);
     }
 }

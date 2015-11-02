@@ -11,4 +11,5 @@ import java.util.List;
 public interface ServicesClient {
 
     Response<List<Service>> getServices();
+    Response<Service> getService(String id);
 }

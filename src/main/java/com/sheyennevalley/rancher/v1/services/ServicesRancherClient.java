@@ -41,4 +41,21 @@ public class ServicesRancherClient implements ServicesClient {
         }
 
     }
+
+    @Override
+    public Response<Service> getService(String id) {
+        RancherResponse response = baseClient.makeGetRequest("/v1/services/" + id);
+
+        if (response.getStatusCode() == 200) {
+            try {
+
+                Service service = objectMapper.readValue(response.getContent(), Service.class);
+                return new Response<Service>(service);
+            } catch (Exception e){
+                throw new RancherException(e);
+            }
+        } else {
+            throw new RancherException(response.getStatusCode() + " - " + response.getStatusMessage());
+        }
+    }
 }

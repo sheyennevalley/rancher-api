@@ -1,11 +1,10 @@
 package com.sheyennevalley.rancher.v1.containers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sheyennevalley.rancher.RancherResponse;
 import com.sheyennevalley.rancher.v1.BaseClient;
+import com.sheyennevalley.rancher.v1.BaseClientTest;
 import com.sheyennevalley.rancher.v1.Response;
 import com.sheyennevalley.rancher.v1.containers.model.Container;
-import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +20,7 @@ import static org.mockito.Mockito.when;
  * Created by justin on 11/1/15.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ContainersClientTest {
+public class ContainersClientTest extends BaseClientTest{
 
     private ContainersClient containersClient;
 
@@ -49,14 +48,4 @@ public class ContainersClientTest {
 
     }
 
-    private RancherResponse buildResponse(String resource){
-        try {
-            String content = IOUtils.toString(
-                    getClass().getResourceAsStream(resource), "UTF-8");
-            return new RancherResponse(200, "Success", content);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

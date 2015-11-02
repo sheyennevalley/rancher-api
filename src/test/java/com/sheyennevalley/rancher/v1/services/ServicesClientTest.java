@@ -1,12 +1,10 @@
 package com.sheyennevalley.rancher.v1.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sheyennevalley.rancher.RancherResponse;
 import com.sheyennevalley.rancher.v1.BaseClient;
+import com.sheyennevalley.rancher.v1.BaseClientTest;
 import com.sheyennevalley.rancher.v1.Response;
 import com.sheyennevalley.rancher.v1.services.model.Service;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +20,7 @@ import static org.mockito.Mockito.when;
  * Created by justin on 11/1/15.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ServicesClientTest {
+public class ServicesClientTest extends BaseClientTest{
 
     private ServicesClient servicesClient;
 
@@ -33,24 +31,22 @@ public class ServicesClientTest {
     public void setUp(){
         ObjectMapper mapper = new ObjectMapper();
         servicesClient = new ServicesRancherClient(baseClient, mapper);
-        when(baseClient.makeGetRequest("/v1/services")).thenReturn(buildResponse());
     }
 
     @Test
     public void shouldReturnServicesFromRancher(){
+        when(baseClient.makeGetRequest("/v1/services")).thenReturn(buildResponse("/services.json"));
         Response<List<Service>> response = servicesClient.getServices();
         assertTrue(response.getValue().get(0).getId().equals("1s6"));
 
     }
 
-    private RancherResponse buildResponse(){
-        try {
-            String content = IOUtils.toString(
-                    getClass().getResourceAsStream("/services.json"), "UTF-8");
-            return new RancherResponse(200, "Success", content);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        return null;
+    @Test
+    public void shouldReturnServiceByIdFromRancher(){
+        when(baseClient.makeGetRequest("/v1/services/1s6")).thenReturn(buildResponse("/1s6service.json"));
+        Response<Service> response = servicesClient.getService("1s6");
+        assertTrue(response.getValue().getId().equals("1s6"));
+
     }
+
 }
