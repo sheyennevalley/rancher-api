@@ -30,19 +30,19 @@ public class ContainersClientTest extends BaseClientTest{
     @Before
     public void setUp() {
         ObjectMapper mapper = new ObjectMapper();
-        containersClient = new ContainersRancherClient(baseClient, mapper);
+        containersClient = new ContainersRancherClient(baseClient, mapper, "1a5");
     }
 
     @Test
     public void shouldReturnContianersResponse(){
-        when(baseClient.makeGetRequest("/v1/containers")).thenReturn(buildResponse("/containers.json"));
+        when(baseClient.makeGetRequest("/v1/projects/1a5/containers")).thenReturn(buildResponse("/containers.json"));
         Response<List<Container>> response = containersClient.getContainers();
         assertTrue(response.getValue().get(0).getId().equals("1i7"));
     }
 
     @Test
     public void shouldReturnRequestedContainer(){
-        when(baseClient.makeGetRequest("/v1/containers/1i7")).thenReturn(buildResponse("/1i7Container.json"));
+        when(baseClient.makeGetRequest("/v1/projects/1a5/containers/1i7")).thenReturn(buildResponse("/1i7Container.json"));
         Response<Container> response = containersClient.getContainer("1i7");
         assertTrue(response.getValue().getId().equals("1i7"));
 

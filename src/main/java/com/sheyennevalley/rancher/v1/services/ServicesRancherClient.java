@@ -19,13 +19,17 @@ public class ServicesRancherClient implements ServicesClient {
 
     private final ObjectMapper objectMapper;
 
-    public ServicesRancherClient(BaseClient baseClient, ObjectMapper objectMapper) {
+    private final String projectId;
+
+    public ServicesRancherClient(BaseClient baseClient, ObjectMapper objectMapper, String projectId) {
         this.baseClient = baseClient;
         this.objectMapper = objectMapper;
+        this.projectId = projectId;
     }
 
+    @Override
     public Response<List<Service>> getServices() {
-        RancherResponse response = baseClient.makeGetRequest("/v1/services");
+        RancherResponse response = baseClient.makeGetRequest("/v1/projects/" + projectId + "/services");
 
         if (response.getStatusCode() == 200) {
             try {
@@ -44,7 +48,7 @@ public class ServicesRancherClient implements ServicesClient {
 
     @Override
     public Response<Service> getService(String id) {
-        RancherResponse response = baseClient.makeGetRequest("/v1/services/" + id);
+        RancherResponse response = baseClient.makeGetRequest("/v1/projects/" + projectId + "/services/" + id);
 
         if (response.getStatusCode() == 200) {
             try {

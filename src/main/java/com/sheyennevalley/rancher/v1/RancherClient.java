@@ -18,13 +18,18 @@ public class RancherClient implements ServicesClient, ContainersClient {
     private final ServicesClient servicesClient;
     private final ContainersClient containersClient;
 
-    public RancherClient(BaseClient baseClient, ObjectMapper objectMapper){
-        servicesClient = new ServicesRancherClient(baseClient, objectMapper);
-        containersClient = new ContainersRancherClient(baseClient, objectMapper);
+
+    public RancherClient(BaseClient baseClient, ObjectMapper objectMapper, String projectId){
+        servicesClient = new ServicesRancherClient(baseClient, objectMapper, projectId);
+        containersClient = new ContainersRancherClient(baseClient, objectMapper, projectId);
     }
 
-    public RancherClient(){
-        this(new BaseClient(), new ObjectMapper());
+    public RancherClient(String projectId){
+        this(new BaseClient(), new ObjectMapper(), projectId);
+    }
+
+    public RancherClient(String host, int port, String projectId){
+        this(new BaseClient(host, port), new ObjectMapper(), projectId);
     }
 
     @Override

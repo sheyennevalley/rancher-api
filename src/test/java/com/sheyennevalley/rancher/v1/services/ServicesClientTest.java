@@ -30,12 +30,12 @@ public class ServicesClientTest extends BaseClientTest{
     @Before
     public void setUp(){
         ObjectMapper mapper = new ObjectMapper();
-        servicesClient = new ServicesRancherClient(baseClient, mapper);
+        servicesClient = new ServicesRancherClient(baseClient, mapper, "1a5");
     }
 
     @Test
     public void shouldReturnServicesFromRancher(){
-        when(baseClient.makeGetRequest("/v1/services")).thenReturn(buildResponse("/services.json"));
+        when(baseClient.makeGetRequest("/v1/projects/1a5/services")).thenReturn(buildResponse("/services.json"));
         Response<List<Service>> response = servicesClient.getServices();
         assertTrue(response.getValue().get(0).getId().equals("1s6"));
 
@@ -43,7 +43,7 @@ public class ServicesClientTest extends BaseClientTest{
 
     @Test
     public void shouldReturnServiceByIdFromRancher(){
-        when(baseClient.makeGetRequest("/v1/services/1s6")).thenReturn(buildResponse("/1s6service.json"));
+        when(baseClient.makeGetRequest("/v1/projects/1a5/services/1s6")).thenReturn(buildResponse("/1s6service.json"));
         Response<Service> response = servicesClient.getService("1s6");
         assertTrue(response.getValue().getId().equals("1s6"));
 

@@ -19,14 +19,17 @@ public class ContainersRancherClient implements ContainersClient {
 
     private final ObjectMapper objectMapper;
 
-    public ContainersRancherClient(BaseClient baseClient, ObjectMapper objectMapper) {
+    private final String projectId;
+
+    public ContainersRancherClient(BaseClient baseClient, ObjectMapper objectMapper, String projectId) {
         this.baseClient = baseClient;
         this.objectMapper = objectMapper;
+        this.projectId = projectId;
     }
 
     @Override
     public Response<List<Container>> getContainers() {
-        RancherResponse response = baseClient.makeGetRequest("/v1/containers");
+        RancherResponse response = baseClient.makeGetRequest("/v1/projects/" + projectId +  "/containers");
 
         if (response.getStatusCode() == 200) {
             try {
@@ -44,7 +47,7 @@ public class ContainersRancherClient implements ContainersClient {
 
     @Override
     public Response<Container> getContainer(String id) {
-        RancherResponse response = baseClient.makeGetRequest("/v1/containers/" + id);
+        RancherResponse response = baseClient.makeGetRequest("/v1/projects/" + projectId + "/containers/" + id);
 
         if (response.getStatusCode() == 200) {
             try {
@@ -60,7 +63,7 @@ public class ContainersRancherClient implements ContainersClient {
 
     @Override
     public Response<List<Container>> getContainersByService(String id) {
-        RancherResponse response = baseClient.makeGetRequest("/v1/services/" + id + "/instances");
+        RancherResponse response = baseClient.makeGetRequest("/v1/projects/" + projectId + "/services/" + id + "/instances");
 
         if (response.getStatusCode() == 200) {
             try {
